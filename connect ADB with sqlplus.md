@@ -1,7 +1,7 @@
 - Uploaded `wallet.zip` file into github and Downloaded `wallet.zip` file by using `wget` command [`wget -N -O wallet.zip https://github.com/maheshbabupara/TEST/blob/main/Wallet_DB_1.zip`]
 - created wallet directory [`mkdir wallet`]
 - unzip `wallet.zip` to wallet directory [`unzip Wallet.zip -d /home/maheshbabu/wallet`]
-- set `TNS_ADMIN` environment variable with above unzipped wallet path [`export TNS_ADMIN=/home/maheshbabu/wallet`]
+- set `TNS_ADMIN` environment variable with above unzipped wallet path [`export TNS_ADMIN=/home/maheshbabu/wallet` `echo $TNS_ADMIN` to see value in it]
 - Replace `?/network/admin` with above path in `sqlnet.ora` file which is available in the unzipped wallet path [`vi sqlnet.ora`]
 - now login to the execute `sqlplus <username>@<sevice available in tnsname.ora file>` [`sqlplus mahesh@db_high`]
 - Note: If the password has "@" then enclose the password within the double quotes [password:`"Mahesh@12"`]
